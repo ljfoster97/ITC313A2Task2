@@ -66,7 +66,7 @@ public class Task2 extends Application {
         borderPane.setBottom(radioButtonBox);
 
         // Create event handlers for all radioButtons.
-        // There is probably a less repetitive way to do this.
+        // It's probably better to do property binding for something like this, but there are only three buttons.
         rbRed.setOnAction(e -> {
             if (rbRed.isSelected()) {
                 circle1.setFill(Color.WHITE);
