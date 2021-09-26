@@ -1,4 +1,5 @@
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.RadioButton;
@@ -67,6 +68,7 @@ public class Task2 extends Application {
         rbRed.setSelected(true);
         // Add all the radioButtons to the box.
         radioButtonBox.getChildren().addAll(rbGreen, rbYellow, rbRed);
+        radioButtonBox.setPadding(new Insets(15));
 
         // Create a new BorderPane.
         BorderPane borderPane = new BorderPane();
@@ -109,7 +111,7 @@ public class Task2 extends Application {
         });
 
         // Create a new scene.
-        Scene scene = new Scene(borderPane, 400, 250);
+        Scene scene = new Scene(borderPane, 200, 250);
         // Set the stage title
         primaryStage.setTitle("Fill up the Circles");
         // Add the scene to the stage.
