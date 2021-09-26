@@ -12,6 +12,14 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.geometry.Pos;
 
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+
+import java.awt.event.ActionListener;
+
 import static javafx.scene.paint.Color.TRANSPARENT;
 
 public class Task2 extends Application {
@@ -65,8 +73,17 @@ public class Task2 extends Application {
         borderPane.setCenter(stackPane);
         borderPane.setBottom(radioButtonBox);
 
+
+//        rbRed.setOnAction(new EventHandler<ActionEvent>() {
+//            @Override
+//            public void handle(ActionEvent actionEvent) {
+//                if (rbRed.isSelected()){
+//
+//                }
+//            }
+//        });
+
         // Create event handlers for all radioButtons.
-        // It's probably better to do property binding for something like this, but there are only three buttons.
         rbRed.setOnAction(e -> {
             if (rbRed.isSelected()) {
                 circle1.setFill(Color.WHITE);
@@ -92,7 +109,7 @@ public class Task2 extends Application {
         });
 
         // Create a new scene.
-        Scene scene = new Scene(borderPane, 300, 150);
+        Scene scene = new Scene(borderPane, 400, 250);
         // Set the stage title
         primaryStage.setTitle("Fill up the Circles");
         // Add the scene to the stage.
@@ -108,4 +125,5 @@ public class Task2 extends Application {
         c.setStroke(Color.BLACK);
         return c;
     }
+
 }
