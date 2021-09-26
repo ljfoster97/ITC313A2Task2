@@ -19,8 +19,6 @@ import javax.swing.event.ChangeListener;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
-import java.awt.event.ActionListener;
-
 import static javafx.scene.paint.Color.TRANSPARENT;
 
 public class Task2 extends Application {
